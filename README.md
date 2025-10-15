@@ -5,13 +5,21 @@ It covers two approaches — normal room switching and Media Relay–based switc
 ## 🔥 Features
 
 ✅ Join Room A as a host or participant
+
 ✅ Seamlessly switch from Room A → Room B
+
 ✅ Demonstrate Media Relay to relay streams between rooms
+
 ✅ Maintain audio/video continuity during switch
+
 ✅ Simple, intuitive UI with control buttons:
+
 Join Room A/create new meeting
+
 Switch to Room B
+
 Trigger switch rooms
+
 
 ## ⚡ Quick Setup
 
@@ -26,27 +34,35 @@ Trigger switch rooms
 
 ## Setup and Installation
 
-1️⃣ Clone the Repository
+### 1. Clone the sample project
 
-git clone [https://github.com/yourusername/videosdk-participant-room-switch.git](https://github.com/Vaibhavlakhatariya/videosdk-task.git)
+Clone the repository to your local environment.
 
-cd videosdk-room-switch
+```js
+git clone [https://github.com/videosdk-live/videosdk-ils-react-sdk-example](https://github.com/Vaibhavlakhatariya/videosdk-task.git)
+```
 
-2️⃣ Install Dependencies
-
-npm install
-
-npm install "@videosdk.live/react-sdk@latest"
-
-3️⃣ Add Your VideoSDK Token
-
-Update src/API.js:
+```Update src/API.js:
 
 export const authToken = "YOUR_TEMPORARY_TOKEN_HERE";
+```
 
-4️⃣ Run the App
+### 4. Install the dependencies
 
-npm start
+Install all the dependencies to run the project.
+
+```js
+npm install
+npm install "@videosdk.live/react-sdk@latest"
+```
+
+### 5. Run the sample app
+
+```js
+npm  start
+```
+
+
 
 ### How to Test the Application
 
@@ -78,18 +94,25 @@ SDK updates or rate limits might affect performance during continuous switches.
 
 🔄 Difference Between Normal Room Switching and Media Relay Switching
 Normal Room Switching
+
 In normal switching, the participant completely leaves the current meeting (Room A) and then joins a new meeting (Room B). This process involves disconnecting and reconnecting the audio and video streams, which may cause a short interruption. A new meeting ID is generated or joined, and the participant reinitializes their media streams.
 Normal switching is ideal for use cases like breakout sessions, team shifts, or when a user intentionally moves from one meeting to another.
 
 Media Relay Switching
+
 Media Relay offers a more seamless and efficient way to move between rooms. Instead of leaving Room A and rejoining Room B, the participant’s media (audio and video) is relayed from one room to another without a full reconnection. This ensures minimal delay and maintains near-continuous media flow between rooms.
 Implementing Media Relay is slightly more advanced, as it requires setting up relay channels to share streams across rooms. However, it provides a much smoother experience and better performance, especially in low-latency environments.
 This method is particularly useful for live streaming events, multi-room broadcasts, or stage-based applications where uninterrupted transitions are important.
 
 📖 References
+
 VideoSDK React SDK Documentation
+
 Media Relay Guide
+
 Authentication & Token Setup
+
+
 
 
 
