@@ -1,5 +1,7 @@
 🎥 VideoSDK React Task — Participant Room Switch
+
 This project demonstrates seamless participant room switching between two rooms using the VideoSDK React SDK.
+
 It covers two approaches — normal room switching and Media Relay–based switching, maintaining audio/video continuity as much as possible.
 
 ## 🔥 Features
@@ -24,12 +26,15 @@ Trigger switch rooms
 ## ⚡ Quick Setup
 
 1. Sign up on [VideoSDK](https://app.videosdk.live/) to grab your API Key and Secret.
+  
 2. Familiarize yourself with [Token](https://docs.videosdk.live/react/guide/video-and-audio-calling-api-sdk/authentication-and-token)
 
 ## 🛠 Prerequisites
 
 - React v16 or later
+  
 - Node v10 or later
+  
 - Valid Video SDK [Account](https://app.videosdk.live/)
 
 ## Setup and Installation
@@ -67,23 +72,37 @@ npm  start
 ### How to Test the Application
 
 1️⃣ Create and Join a Meeting
+
 Click on “Create New Meeting” to generate a new meeting ID.
+
 You can join this meeting immediately once it’s created.
+
 The app allows you to switch between rooms seamlessly —
+
 simply click “Switch Room (Normal)” to move to another room.
+
 A new meeting ID will be generated automatically, or you can also join an existing meeting using its ID.
+
 All of this happens without reloading the page or reconnecting fully, ensuring a smooth transition.
 
+
 2️⃣ Test Media Relay Functionality
+
 To experience Media Relay, follow these steps:
+
 Open two browser tabs of the app.
+
 In the first tab, click “Create New Meeting” and join the meeting.
+
 In the second tab, paste the Meeting ID from the first tab into the meeting input box.
+
 Once joined, the Media Relay will automatically activate —
+
 streaming audio and video from one meeting to the other in real time.
 
 ✅ You’ll notice that both mic and webcam remain active in both rooms simultaneously,
 demonstrating the relay of media between rooms using VideoSDK.
+
 
 ### Limitations & Challenges
 
@@ -94,6 +113,7 @@ Browser permissions may interrupt reinitialization of mic/camera.
 Media Relay requires careful token validation and room configuration.
 
 SDK updates or rate limits might affect performance during continuous switches.
+
 
 
 🔄 Difference Between Normal Room Switching and Media Relay Switching
