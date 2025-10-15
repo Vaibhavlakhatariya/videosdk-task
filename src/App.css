@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #bbc34c 0%, #7830bc90 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Join Screen Styles */
+.join-screen {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+.join-screen h1 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.join-screen input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.join-screen input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background: #667eea;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success {
+  background: #48bb78;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #38a169;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(72, 187, 120, 0.4);
+}
+
+.btn-secondary {
+  background: #718096;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn-secondary:hover {
+  background: #4a5568;
+}
+
+.btn-warning {
+  background: #ed8936;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn-warning:hover {
+  background: #dd6b20;
+}
+
+.btn-danger {
+  background: #f56565;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn-danger:hover {
+  background: #e53e3e;
+}
+
+.btn-large {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+}
+
+/* Meeting View Styles */
+.meeting-view {
+  background: white;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 1200px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.meeting-header {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 15px;
+}
+
+.meeting-header h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.switch-mode {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.joining-text {
+  text-align: center;
+  font-size: 18px;
+  color: #667eea;
+  padding: 40px;
+}
+
+/* Meeting Container */
+.meeting-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Controls Styles */
+.controls {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.participant-count {
+  color: #4a5568;
+  font-weight: 600;
+  padding: 8px 16px;
+  background: white;
+  border-radius: 6px;
+}
+
+/* Participants Grid */
+.participants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .participants-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Participant View */
+.participant-view {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.participant-view:hover {
+  border-color: #667eea;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+}
+
+.participant-info {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.media-status {
+  font-size: 12px;
+  color: #718096;
+  margin-bottom: 10px;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.participant-view audio {
+  display: none;
+}
+
+/* Video Player Container */
+.participant-view > div {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .meeting-view {
+    max-width: 95vw;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .control-buttons {
+    justify-content: center;
+  }
+
+  .participant-count {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .join-screen {
+    padding: 20px;
+  }
+
+  .join-screen h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .button-group {
+    gap: 8px;
+  }
+
+  .meeting-view {
+    width: 100%;
+    border-radius: 0;
+    max-height: 100vh;
+    padding: 15px;
+  }
+
+  .participants-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .control-buttons {
+    gap: 6px;
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+}
