@@ -27,21 +27,29 @@ Trigger switch rooms
 ## Setup and Installation
 
 1️⃣ Clone the Repository
-git clone https://github.com/yourusername/videosdk-participant-room-switch.git
+
+git clone [https://github.com/yourusername/videosdk-participant-room-switch.git](https://github.com/Vaibhavlakhatariya/videosdk-task.git)
+
 cd videosdk-room-switch
 
 2️⃣ Install Dependencies
+
 npm install
+
 npm install "@videosdk.live/react-sdk@latest"
 
 3️⃣ Add Your VideoSDK Token
+
 Update src/API.js:
+
 export const authToken = "YOUR_TEMPORARY_TOKEN_HERE";
 
 4️⃣ Run the App
+
 npm start
 
 ### How to Test the Application
+
 1️⃣ Create and Join a Meeting
 Click on “Create New Meeting” to generate a new meeting ID.
 You can join this meeting immediately once it’s created.
@@ -57,6 +65,7 @@ In the first tab, click “Create New Meeting” and join the meeting.
 In the second tab, paste the Meeting ID from the first tab into the meeting input box.
 Once joined, the Media Relay will automatically activate —
 streaming audio and video from one meeting to the other in real time.
+
 ✅ You’ll notice that both mic and webcam remain active in both rooms simultaneously,
 demonstrating the relay of media between rooms using VideoSDK.
 
