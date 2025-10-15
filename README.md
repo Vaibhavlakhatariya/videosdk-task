@@ -39,11 +39,11 @@ Trigger switch rooms
 Clone the repository to your local environment.
 
 ```js
-git clone [https://github.com/videosdk-live/videosdk-ils-react-sdk-example](https://github.com/Vaibhavlakhatariya/videosdk-task.git)
+git clone https://github.com/Vaibhavlakhatariya/videosdk-task.git
 ```
 
-```Update src/API.js:
-
+```
+Update src/API.js:
 export const authToken = "YOUR_TEMPORARY_TOKEN_HERE";
 ```
 
@@ -86,13 +86,18 @@ streaming audio and video from one meeting to the other in real time.
 demonstrating the relay of media between rooms using VideoSDK.
 
 ### Limitations & Challenges
+
 Media continuity can still experience a brief delay in normal switching.
+
 Browser permissions may interrupt reinitialization of mic/camera.
+
 Media Relay requires careful token validation and room configuration.
+
 SDK updates or rate limits might affect performance during continuous switches.
 
 
 🔄 Difference Between Normal Room Switching and Media Relay Switching
+
 Normal Room Switching
 
 In normal switching, the participant completely leaves the current meeting (Room A) and then joins a new meeting (Room B). This process involves disconnecting and reconnecting the audio and video streams, which may cause a short interruption. A new meeting ID is generated or joined, and the participant reinitializes their media streams.
